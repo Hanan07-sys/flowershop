@@ -17,6 +17,7 @@ class TransaksiBungaSeeder extends Seeder
     {
         //
         $faker = Faker::create('id_ID');
+        $bunga_id = DB::table('bunga')->pluck('id')->toArray();
 
         for ($i=0; $i < 5 ; $i++) { 
             # code...
@@ -26,6 +27,8 @@ class TransaksiBungaSeeder extends Seeder
                 'barcode'=> $faker->ean13,
                 'tipe_pembayaran'=> $faker->creditCardType,
                 'tanggal_pembayaran'=> $faker->dateTime,
+                'bunga_id' => $bunga_id[array_rand($bunga_id)], 
+
                 'created_at'=> now(),
                 'updated_at'=> now()
             ]);
