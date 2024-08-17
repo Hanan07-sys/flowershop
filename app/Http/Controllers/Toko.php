@@ -8,6 +8,7 @@ use App\Models\TokoModel;
 use App\Models\KontakTokoModel;
 use App\Models\PenjualanBungaModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
@@ -19,9 +20,13 @@ class Toko extends Controller
     public function index()
     {
         // $tokos = TokoModel::all();
+
+        $user = Auth::user();
+        
         $tokos = TokoModel::paginate(3);
         return view('index', [
             'data' => $tokos,
+            'user' => $user,
         ]);
     }
 
