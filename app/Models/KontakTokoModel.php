@@ -10,6 +10,13 @@ class KontakTokoModel extends Model
 {
     use HasFactory;
     protected $table = 'kontak_toko';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'no_hp',
+        'email',
+        'toko_id',
+        'alamat',
+    ];
 
     public function toko(): BelongsTo
     {

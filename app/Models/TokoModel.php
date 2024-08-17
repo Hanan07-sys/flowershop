@@ -11,6 +11,8 @@ class TokoModel extends Model
 {
     use HasFactory;
     protected $table = 'toko';
+    protected $primaryKey = 'id';
+    protected $fillable = ['nama']; 
 
     public function kontakToko()
     {
