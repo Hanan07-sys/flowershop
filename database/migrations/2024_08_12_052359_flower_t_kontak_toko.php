@@ -19,7 +19,7 @@ class FlowerTKontakToko extends Migration
             $table->string('no_hp');
             $table->string('alamat');
             $table->string('email');
-            $table->foreignId('toko_id')->constrained('toko');
+            $table->foreignId('toko_id')->constrained('toko')->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
         });
     }
