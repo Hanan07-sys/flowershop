@@ -1,0 +1,21 @@
+{
+    "Welcome to this page" : "Selamat datang ke halaman ini",
+    "Name" : "Nama",
+    "Email" : "Surel",
+    "Role" : "Jabatan",
+    "Login" : "Masuk",
+    "Logout" : "keluar",
+    "Change Password" : "Ubah Password",
+    "Register" : "Daftar",
+    "Name Shop" : "Nama Toko",
+    "Action" : "Aksi",
+    "Edit" : "Ubah",
+    "Delete" : "Hapus",
+    "Current Page" : "Halaman sekarang",
+    "Total Data" : "Total Data",
+    "Data per page" : "Data per halaman",
+    "Email Address": "Alamat Surel",
+    "Password": "Kata Sandi",
+    "Remember Me": "Ingat saya",
+    "Forgot Your Password?": "Lupa dengan kata sandi?"
+}

@@ -52,3 +52,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/locale/{locale}', [LocaleController::class, 'set_locale'])->name('set_locale');
