@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\PictureController;
 use App\Http\Controllers\TokoController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +56,16 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/locale/{locale}', [LocaleController::class, 'set_locale'])->name('set_locale');
+
+// Storage
+Route::get('/picture/create', [PictureController::class, 'create'])->name('picture.create');
+
+Route::get('/picture/{picture}', [PictureController::class, 'show'])->name('picture.show');
+
+Route::get('/copy/{picture}', [PictureController::class, 'copy'])->name('picture.copy');
+
+Route::get('/move/{picture}', [PictureController::class, 'move'])->name('picture.move');
+
+Route::post('/picture/save', [PictureController::class, 'save'])->name('picture.save');
+
+Route::delete('/picture/{picture}', [PictureController::class, 'delete'])->name('picture.delete');
